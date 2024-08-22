@@ -1,0 +1,49 @@
+.curriculo-row {
+    display: flex;
+    justify-content: space-between; /* Distribui igualmente o espaço entre os itens */
+    gap: 20px; /* Espaço entre os itens */
+    margin-bottom: 20px; /* Espaço abaixo da linha */
+}
+
+.curriculo-item {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Cada item ocupa um terço da largura da linha, com espaço de 20px */
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    max-width: calc(33.333% - 20px); /* Limita a largura máxima para um terço da linha */
+}
+
+.curriculo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.curriculo-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.curriculo-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .curriculo-item {
+        flex: 1 1 calc(50% - 20px); /* Ocupa metade da linha em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .curriculo-item {
+        flex: 1 1 100%; /* Ocupa 100% da largura da linha em telas pequenas */
+        max-width: none;
+    }
+}
